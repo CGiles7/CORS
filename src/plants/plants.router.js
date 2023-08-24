@@ -28,6 +28,8 @@ router
   })
   .all(methodNotAllowed);
 
+router.route("/:plantId").options(cors(corsOptions));
+
 router
   .route("/:plantId")
   .get(cors(corsOptions), controller.read)
